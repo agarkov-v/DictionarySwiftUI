@@ -11,6 +11,10 @@
 		CE58A30726A9DA6900121661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58A30626A9DA6900121661 /* ContentView.swift */; };
 		CE58A30926A9DA6A00121661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58A30826A9DA6A00121661 /* Assets.xcassets */; };
 		CE58A30C26A9DA6A00121661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58A30B26A9DA6A00121661 /* Preview Assets.xcassets */; };
+		CE8E948826CB941F0002CDDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E948726CB941F0002CDDB /* MainView.swift */; };
+		CE8E94A626CB99220002CDDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94A526CB99220002CDDB /* AppDelegate.swift */; };
+		CE8E94AD26CBFCAF0002CDDB /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */; };
+		CE8E94B026CC03590002CDDB /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94AF26CC03590002CDDB /* testView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		CE58A30826A9DA6A00121661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE58A30B26A9DA6A00121661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE58A30D26A9DA6A00121661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8E948726CB941F0002CDDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE8E94A526CB99220002CDDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		CE8E94AF26CC03590002CDDB /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,21 +60,97 @@
 		CE58A30326A9DA6900121661 /* DictionarySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CE58A30426A9DA6900121661 /* DictionarySwiftUIApp.swift */,
-				CE58A30626A9DA6900121661 /* ContentView.swift */,
-				CE58A30826A9DA6A00121661 /* Assets.xcassets */,
-				CE58A30D26A9DA6A00121661 /* Info.plist */,
-				CE58A30A26A9DA6A00121661 /* Preview Content */,
+				CE8E948026CB8D250002CDDB /* System */,
+				CE8E948426CB8E130002CDDB /* Data */,
+				CE8E948126CB8D3B0002CDDB /* Screens */,
+				CE8E948326CB8DBE0002CDDB /* Base */,
+				CE8E948226CB8DB80002CDDB /* Extensions */,
+				CE8E947F26CB8CD80002CDDB /* Resources */,
 			);
 			path = DictionarySwiftUI;
 			sourceTree = "<group>";
 		};
-		CE58A30A26A9DA6A00121661 /* Preview Content */ = {
+		CE8E947F26CB8CD80002CDDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E94A426CB96920002CDDB /* Preview Content */,
+				CE58A30826A9DA6A00121661 /* Assets.xcassets */,
+				CE58A30D26A9DA6A00121661 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE8E948026CB8D250002CDDB /* System */ = {
+			isa = PBXGroup;
+			children = (
+				CE58A30426A9DA6900121661 /* DictionarySwiftUIApp.swift */,
+				CE8E94A526CB99220002CDDB /* AppDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		CE8E948126CB8D3B0002CDDB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E948626CB94050002CDDB /* MainView */,
+				CE8E94AE26CBFFF60002CDDB /* Test */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CE8E948226CB8DB80002CDDB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE8E948326CB8DBE0002CDDB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE8E948426CB8E130002CDDB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E948526CB8EA10002CDDB /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CE8E948526CB8EA10002CDDB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CE8E948626CB94050002CDDB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E948726CB941F0002CDDB /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		CE8E94A426CB96920002CDDB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
 				CE58A30B26A9DA6A00121661 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE8E94AE26CBFFF60002CDDB /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CE58A30626A9DA6900121661 /* ContentView.swift */,
+				CE8E94AF26CC03590002CDDB /* testView.swift */,
+				CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8E94A626CB99220002CDDB /* AppDelegate.swift in Sources */,
 				CE58A30726A9DA6900121661 /* ContentView.swift in Sources */,
+				CE8E94B026CC03590002CDDB /* testView.swift in Sources */,
+				CE8E94AD26CBFCAF0002CDDB /* ResultView.swift in Sources */,
+				CE8E948826CB941F0002CDDB /* MainView.swift in Sources */,
 				CE58A30526A9DA6900121661 /* DictionarySwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,10 +356,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"DictionarySwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DictionarySwiftUI/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 674395HGU2;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DictionarySwiftUI/Info.plist;
+				INFOPLIST_FILE = DictionarySwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,10 +378,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"DictionarySwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DictionarySwiftUI/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 674395HGU2;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DictionarySwiftUI/Info.plist;
+				INFOPLIST_FILE = DictionarySwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

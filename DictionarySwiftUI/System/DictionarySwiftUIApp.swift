@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DictionarySwiftUIApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
