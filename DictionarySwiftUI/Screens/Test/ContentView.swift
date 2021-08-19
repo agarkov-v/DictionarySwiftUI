@@ -12,7 +12,7 @@ class User: ObservableObject {
 }
 
 struct ChangeView: View {
-    @EnvironmentObject var user: User
+    @ObservedObject var user: User
 
     var body: some View {
         VStack {
@@ -32,7 +32,7 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 30) {
                 Text("Score: \(user.score)")
-                NavigationLink(destination: ChangeView()) {
+                NavigationLink(destination: ChangeView(user: user)) {
                     Text("Show Detail View")
                 }
             }

@@ -15,6 +15,7 @@ struct DictionarySwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+//            ContentView()
         }
     }
 }
