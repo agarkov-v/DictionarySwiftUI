@@ -22,6 +22,7 @@ struct ChangeView: View {
             }
         }
     }
+    
 }
 
 struct ContentView: View {

@@ -9,8 +9,10 @@ import SwiftUI
 
 struct testView: View {
     var body: some View {
+        
         NavigationView {
-            Text("Primary")
+            let data = TranslationResponse.petMockData
+            Text("\(data.definition[0].text) - \(data.definition[0].translations[0].text )")
             Text("Secondary")
         }
         .navigationViewStyle(StackNavigationViewStyle())

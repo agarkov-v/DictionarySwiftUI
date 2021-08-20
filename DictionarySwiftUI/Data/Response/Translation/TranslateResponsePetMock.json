@@ -1,0 +1,46 @@
+{
+    "head": {},
+    "def": [
+        {
+            "text": "домашнее животное",
+            "pos": "noun",
+            "tr": [
+                {
+                    "text": "pet",
+                    "pos": "noun",
+                    "fr": 10,
+                    "syn": [
+                        {
+                            "text": "domestic animal",
+                            "pos": "noun",
+                            "fr": 5
+                        },
+                        {
+                            "text": "pet animal",
+                            "pos": "noun",
+                            "fr": 1
+                        }
+                    ],
+                    "mean": [
+                        {
+                            "text": "животное"
+                        },
+                        {
+                            "text": "домашний скот"
+                        }
+                    ]
+                },
+                {
+                    "text": "domesticated animal",
+                    "pos": "noun",
+                    "fr": 1,
+                    "mean": [
+                        {
+                            "text": "одомашненное животное"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
