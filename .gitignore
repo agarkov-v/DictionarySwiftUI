@@ -1,0 +1,15 @@
+# macOS files
+*.DS_Store
+
+# Specific user data
+**/xcshareddata
+**/xcuserdata
+
+# Build
+build
+
+# AppCode
+GoldApple/.idea
+
+# Breakpoints
+*.xcbkptlist
