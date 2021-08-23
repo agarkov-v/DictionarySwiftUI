@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  DictionarySwiftUI
+
+  Created by Vyacheslav Agarkov on 23.08.2021.
+  
+*/
+
+"test %lld" = "это тест номер %lld";

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  DictionarySwiftUI
+
+  Created by Vyacheslav Agarkov on 23.08.2021.
+  
+*/
+// %@
+// Int - %lld
+// UInt - %llu
+// unbreakable space - \U2060 \U2060
+"test %lld" = "it is test number %lld";

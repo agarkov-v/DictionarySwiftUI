@@ -11,6 +11,8 @@
 		CE58A30726A9DA6900121661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58A30626A9DA6900121661 /* ContentView.swift */; };
 		CE58A30926A9DA6A00121661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58A30826A9DA6A00121661 /* Assets.xcassets */; };
 		CE58A30C26A9DA6A00121661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58A30B26A9DA6A00121661 /* Preview Assets.xcassets */; };
+		CE70767826D395E200AAAB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767A26D395E200AAAB6A /* Localizable.strings */; };
+		CE70767D26D395F800AAAB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767F26D395F800AAAB6A /* Localizable.strings */; };
 		CE8E948826CB941F0002CDDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E948726CB941F0002CDDB /* MainView.swift */; };
 		CE8E94A626CB99220002CDDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94A526CB99220002CDDB /* AppDelegate.swift */; };
 		CE8E94AD26CBFCAF0002CDDB /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */; };
@@ -36,6 +38,8 @@
 		CE58A30826A9DA6A00121661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE58A30B26A9DA6A00121661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE58A30D26A9DA6A00121661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE70767926D395E200AAAB6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE70767E26D395F800AAAB6A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E948726CB941F0002CDDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CE8E94A526CB99220002CDDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				CE8E94A426CB96920002CDDB /* Preview Content */,
 				CE58A30826A9DA6A00121661 /* Assets.xcassets */,
 				CE58A30D26A9DA6A00121661 /* Info.plist */,
+				CE70767A26D395E200AAAB6A /* Localizable.strings */,
+				CE70767F26D395F800AAAB6A /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = CE58A2F826A9DA6900121661;
 			productRefGroup = CE58A30226A9DA6900121661 /* Products */;
@@ -326,6 +333,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE70767826D395E200AAAB6A /* Localizable.strings in Resources */,
+				CE70767D26D395F800AAAB6A /* Localizable.strings in Resources */,
 				CE58A30C26A9DA6A00121661 /* Preview Assets.xcassets in Resources */,
 				CEF3E0ED26CFD28A00C8C013 /* TranslateResponsePetMock.json in Resources */,
 				CEF3E0E426CFC9DC00C8C013 /* TranslateResponseFriendMock.json in Resources */,
@@ -360,6 +369,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE70767A26D395E200AAAB6A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE70767926D395E200AAAB6A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CE70767F26D395F800AAAB6A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE70767E26D395F800AAAB6A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE58A30E26A9DA6A00121661 /* Debug */ = {
