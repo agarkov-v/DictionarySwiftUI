@@ -80,7 +80,8 @@ class DataService {
     private func getQueryItems(queryItems: [URLQueryItem]?, parameters: JSONDictionary?) -> [URLQueryItem]? {
         guard queryItems != nil || parameters != nil else { return nil }
         var allQueryItems: [URLQueryItem] = queryItems ?? []
-        if let parameters = parameters, !parameters.isEmpty {
+        if let parameters = parameters,
+           !parameters.isEmpty {
             for parameter in parameters {
                 allQueryItems.append(
                     URLQueryItem(name: parameter.key, value: String(describing: parameter.value))

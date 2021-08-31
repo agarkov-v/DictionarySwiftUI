@@ -14,11 +14,29 @@ extension DataService {
                             fromLanguage: Language,
                             toLanguage: Language) -> AnyPublisher<TranslationResponse, Error> {
         
+        let urlString = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup"
+        guard
+            let url = URLComponents(string: urlString)?.url
+        else {
+            return Fail(error: AppError.badURL(urlString)).eraseToAnyPublisher()
+       }
+        
+        let apiKey = "dict.1.1.20210819T084112Z.53ed90b206cef750.c5652f7c3f878ad5d505bc11be767bba67ea8856"
+        let language = "\(fromLanguage.rawValue)-\(toLanguage.rawValue)"
+        // ?key=APIkey&lang=en-ru&text=time
+        
+        let parameters: JSONDictionary = [
+            "key": apiKey,
+            "lang": language,
+            "text": word
+        ]
+        
         return performRequest(method: .get,
-                              url: <#T##URL#>,
-                              parameters: <#T##JSONDictionary?#>)
-            .map { data -> TranslationResponse in
-                
+                              url: url,
+                              parameters: parameters)
+            .tryMap { data -> TranslationResponse in
+                return try JSONDecoder().decode(TranslationResponse.self, from: data)
             }
+            .eraseToAnyPublisher()
     }
 }

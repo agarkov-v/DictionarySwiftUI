@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 class User: ObservableObject {
     @Published var score = 0
@@ -42,6 +43,11 @@ struct ContentView: View {
                     trailing:
                         HStack {
                             Button("Subtract 1") {
+                                TestRequest().testRequest()
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                    print("|| tr: \(TestRequest().translation)")
+                                }
                                 self.user.score -= 1
                             }
                             Button("Add 1") {
