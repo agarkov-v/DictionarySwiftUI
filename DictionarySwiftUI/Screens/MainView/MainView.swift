@@ -19,12 +19,12 @@ struct MainTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            ContentView().tabItem {
-                Label("menu", systemImage: "list.dash") }
-                .onTapGesture {
-                    selectedTab = .main
-                }
-                .tag(TabItems.main)
+//            ContentView().tabItem {
+//                Label("menu", systemImage: "list.dash") }
+//                .onTapGesture {
+//                    selectedTab = .main
+//                }
+//                .tag(TabItems.main)
             
             testView().tabItem {
                 Label("2", systemImage: "circle") }
