@@ -11,40 +11,20 @@ struct TranslationCell: View {
     let translation: TranslationResponse?
     
     var body: some View {
-//        VStack {
-//            HStack {
-//                Spacer()
-//                Text("Слово")
-//                    .padding(.leading, 10)
-//                Spacer()
-//                Text("Перевод")
-//                Spacer()
-//            }
-//            .padding(.bottom, 10)
-//
-//            HStack {
-//                Spacer()
-//                Text("\(translation!.definition[0].text)")
-//                    .padding(.leading, 10)
-//                    .background(Color.red)
-//
-//                Spacer()
-//                Text("--")
-//                Spacer()
-//                Text("\(translation!.definition[0].translations.first!.text)")
-//                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
-//                Spacer()
-//            }
-        //        }
+        ZStack {
+            
         Group {
         HStack {
                 Text("\(translation!.definition[0].text):")
+                    .frame(maxWidth: .infinity)
                     .background(Color.red)
-            Spacer()
+//            Spacer()
 //            Text("---")
-            Divider()
-            Spacer()
+//            Divider()
+            Rectangle().fill(Color.gray).frame(width: 1)
+//            Spacer()
                 Text("\(translation!.definition[0].translations.first!.text)")
+                    .frame(maxWidth: .infinity)
             }
         
             .fixedSize(horizontal: false, vertical: true)
@@ -54,7 +34,10 @@ struct TranslationCell: View {
         .cornerRadius(10)
         .padding()
         .background(Color.yellow)
-        
+            
+            Rectangle().fill(Color.green).frame(width: 1)
+        }
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     private func layout() {
