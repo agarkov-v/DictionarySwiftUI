@@ -6,7 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class TranslationViewModel: ObservableObject {
+    
+    @Published var translations: [DefinitionItem] = []
+    
+    init() {
+        // fetch DB
+    }
     
 }

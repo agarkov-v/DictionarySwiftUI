@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct DefinitionItem: Codable {
+struct DefinitionItem: Codable, Identifiable  {
     
+    var id: String {
+        text + (translations.first?.text ?? "") + (position ?? "")
+    }
     let text: String
     let position: String?
     let translations: [TranslationItem]

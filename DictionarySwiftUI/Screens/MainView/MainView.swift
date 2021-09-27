@@ -16,15 +16,17 @@ struct MainView_Previews: PreviewProvider {
 struct MainTabView: View {
     
     @State private var selectedTab: TabItems = .main
+    
+    private let translationviewModel = TranslationViewModel()
 
     var body: some View {
         TabView(selection: $selectedTab) {
-//            ContentView().tabItem {
-//                Label("menu", systemImage: "list.dash") }
-//                .onTapGesture {
-//                    selectedTab = .main
-//                }
-//                .tag(TabItems.main)
+            TranslationView(viewModel: translationviewModel).tabItem {
+                Label("menu", systemImage: "list.dash") }
+                .onTapGesture {
+                    selectedTab = .main
+                }
+                .tag(TabItems.main)
             
             testView().tabItem {
                 Label("2", systemImage: "circle") }

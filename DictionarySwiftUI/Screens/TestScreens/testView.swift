@@ -16,6 +16,7 @@ struct testView: View {
             Text("Secondary")
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        
     }
 }
 

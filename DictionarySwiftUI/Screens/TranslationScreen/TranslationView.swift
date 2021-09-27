@@ -7,16 +7,56 @@
 
 import SwiftUI
 
+// MARK: Previews
+
 struct TranslationView_Previews: PreviewProvider {
     static var previews: some View {
-        TranslationView()
+        let viewModel = TranslationViewModel()
+        TranslationView(viewModel: viewModel)
     }
 }
 
+// MARK: TranslationView
+
 struct TranslationView: View {
     
+    // MARK: Public Properties
+    
+    let lang: [String] = ["ru", "en", "fr", "jp", "ch", "ge",]
+    
+    @ObservedObject var viewModel: TranslationViewModel
+    
+    // MARK: Body
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SearchView()
+            
+            if viewModel.translations.isEmpty {
+                emptySection
+            } else {
+                resultList
+            }
+            
+        }
+    }
+    
+    // MARK: Private Properties
+    
+    private var emptySection: some View {
+      Section {
+        Spacer()
+        Text("No results")
+          .foregroundColor(.gray)
+        Spacer()
+      }
+    }
+    
+    private var resultList: some View {
+        List {
+            ForEach(viewModel.translations) {
+                TranslationCell(translation: $0)
+            }
+        }
     }
 }

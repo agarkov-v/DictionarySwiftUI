@@ -7,7 +7,15 @@
 
 import Foundation
 
-enum Language: String {
+enum Language: String, CaseIterable {
     case russian = "ru"
     case english = "en"
+    case polish = "pl"
+    case ukrainian = "uk"
+    case german = "de"
+    case french = "fr"
+    case italian = "it"
+    case spanish = "es"
+    case turkish = "tr"
+    
 }

@@ -18,7 +18,12 @@ class DataService {
     
     // MARK: Private Properties
     
+    private(set) var userSettings: UserSettings!
     private let apiKey = "dict.1.1.20210819T084112Z.53ed90b206cef750.c5652f7c3f878ad5d505bc11be767bba67ea8856"
+    
+    static func initialize(userSettings: UserSettings) {
+        shared.userSettings = userSettings
+    }
     
     // MARK: Public Methods
     

@@ -7,3 +7,12 @@
 */
 
 "test %lld" = "это тест номер %lld";
+
+// MARK: Errors
+"UnknownError" = "неизвестная ошибка";
+"BadResponseError" = "Ошибка сервера";
+"NotConnectedError" = "нет подключения к сети";
+"BadURLError" = "некорректный URL адресс";
+"CustomError" = "непонятная ошибка";
+
+"NoTranslation" = "нет перевода";
