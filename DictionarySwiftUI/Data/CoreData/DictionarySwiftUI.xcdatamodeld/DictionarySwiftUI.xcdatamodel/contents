@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DefinitionItemManagedObject" representedClassName="DefinitionItemManagedObject" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String"/>
+        <relationship name="translations" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TranslationItemManagedObject" inverseName="definition" inverseEntity="TranslationItemManagedObject"/>
+        <fetchIndex name="byIdIndex">
+            <fetchIndexElement property="id" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="ExampleItemManagedObject" representedClassName="ExampleItemManagedObject" syncable="YES">
+        <attribute name="text" attributeType="String"/>
+        <relationship name="translations" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="TranslationItemManagedObject" inverseName="examples" inverseEntity="TranslationItemManagedObject"/>
+    </entity>
+    <entity name="MeaningItemManagedObject" representedClassName="MeaningItemManagedObject" syncable="YES">
+        <attribute name="text" attributeType="String"/>
+        <relationship name="translation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TranslationItemManagedObject" inverseName="meanings" inverseEntity="TranslationItemManagedObject"/>
+    </entity>
+    <entity name="SynonymItemManagedObject" representedClassName="SynonymItemManagedObject" syncable="YES">
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String"/>
+        <relationship name="translation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TranslationItemManagedObject" inverseName="synonyms" inverseEntity="TranslationItemManagedObject"/>
+    </entity>
+    <entity name="TranslationItemManagedObject" representedClassName="TranslationItemManagedObject" syncable="YES">
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String"/>
+        <relationship name="definition" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DefinitionItemManagedObject" inverseName="translations" inverseEntity="DefinitionItemManagedObject"/>
+        <relationship name="examples" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ExampleItemManagedObject" inverseName="translations" inverseEntity="ExampleItemManagedObject"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="MeaningItemManagedObject" inverseName="translation" inverseEntity="MeaningItemManagedObject"/>
+        <relationship name="synonyms" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="SynonymItemManagedObject" inverseName="translation" inverseEntity="SynonymItemManagedObject"/>
+    </entity>
+    <elements>
+        <element name="DefinitionItemManagedObject" positionX="-228.8176879882812" positionY="-227.9566345214844" width="128" height="28"/>
+        <element name="ExampleItemManagedObject" positionX="144.6934814453125" positionY="-38.03045654296875" width="128" height="73"/>
+        <element name="MeaningItemManagedObject" positionX="-175.7252197265625" positionY="165.3049011230468" width="128" height="59"/>
+        <element name="SynonymItemManagedObject" positionX="-400.7586059570312" positionY="145.2352905273438" width="128" height="74"/>
+        <element name="TranslationItemManagedObject" positionX="-229.7340698242188" positionY="-70.47323608398438" width="128" height="119"/>
+    </elements>
+</model>

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 @main
 struct DictionarySwiftUIApp: App {
@@ -16,9 +15,6 @@ struct DictionarySwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
-                .environment(\.managedObjectContext, persistence.container.viewContext)
-//            testView()
-//            ContentView()
         }
     }
 }

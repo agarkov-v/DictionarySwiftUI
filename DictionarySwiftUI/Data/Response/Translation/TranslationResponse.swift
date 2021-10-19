@@ -30,7 +30,7 @@ extension TranslationResponse {
         return makeMockData(.pet)
     }
     
-    static func makeMappedResponse(with response: Any) throws -> TranslationResponse {
+    private static func makeMappedResponse(with response: Any) throws -> TranslationResponse {
         let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
         let mappedResponse =  try JSONDecoder().decode(TranslationResponse.self, from: jsonData)
         return mappedResponse

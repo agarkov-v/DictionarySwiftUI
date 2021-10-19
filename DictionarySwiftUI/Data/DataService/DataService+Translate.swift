@@ -10,9 +10,7 @@ import Combine
 
 extension DataService {
     
-    func requestTranslation(for word: String,
-                            fromLanguage: Language,
-                            toLanguage: Language) -> AnyPublisher<TranslationResponse, Error> {
+    func requestTranslation(for word: String) -> AnyPublisher<TranslationResponse, Error> {
         
         let urlString = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup"
         guard
@@ -20,6 +18,9 @@ extension DataService {
         else {
             return Fail(error: AppError.badURL(urlString)).eraseToAnyPublisher()
        }
+        
+        let fromLanguage = userSettings.fromLanguage
+        let toLanguage = userSettings.toLanguage
         
         let apiKey = "dict.1.1.20210819T084112Z.53ed90b206cef750.c5652f7c3f878ad5d505bc11be767bba67ea8856"
         let language = "\(fromLanguage.rawValue)-\(toLanguage.rawValue)"

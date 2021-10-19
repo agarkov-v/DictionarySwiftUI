@@ -9,54 +9,123 @@ import SwiftUI
 
 // MARK: Previews
 
+#if DEBUG
 struct TranslationView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = TranslationViewModel()
-        TranslationView(viewModel: viewModel)
+        Group {
+            TranslationView()
+                .preferredColorScheme(.light)
+                .previewDisplayName("Defult")
+            
+            TranslationView()
+                .preferredColorScheme(.dark)
+                .previewDisplayName("Dark Mode")
+                .environment(\.locale, Locale.init(identifier: "ru"))
+        }
     }
 }
+#endif
 
 // MARK: TranslationView
 
 struct TranslationView: View {
     
-    // MARK: Public Properties
+    // MARK: - Public Properties
     
-    let lang: [String] = ["ru", "en", "fr", "jp", "ch", "ge",]
-    
-    @ObservedObject var viewModel: TranslationViewModel
-    
-    // MARK: Body
+    // MARK: - Body
     
     var body: some View {
-        VStack {
-            SearchView()
-            
-            if viewModel.translations.isEmpty {
-                emptySection
-            } else {
-                resultList
+        NavigationView {
+            ZStack {
+                Color.bar.ignoresSafeArea()
+                    .allowsHitTesting(false)
+                navigationLink
+                
+                VStack(spacing: .zero) {
+                    SearchView(searchText: $viewModel.searchText)
+                    Group {
+                        if viewModel.definitions.isEmpty {
+                            emptySection
+                        } else {
+                            resultList
+                        }
+                    }
+                    .background(Color.background)
+                }
+                
             }
-            
+            .onAppear {
+                viewModel.loadLocalData()
+            }
+            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarHidden(true)
         }
     }
     
-    // MARK: Private Properties
+    // MARK: - Init
+    
+    init(
+        viewModel: StateObject<TranslationViewModel> = StateObject(wrappedValue: TranslationViewModel())
+    ) {
+        _viewModel = viewModel
+    }
+    
+    // MARK: - Private Properties
+    
+    @StateObject private var viewModel: TranslationViewModel
+    @State private var isCellTapped = false
+    
+    // MARK: Views
     
     private var emptySection: some View {
-      Section {
-        Spacer()
-        Text("No results")
-          .foregroundColor(.gray)
-        Spacer()
-      }
+        Group {
+            switch viewModel.state {
+            case .local:
+                EmptyDataView()
+                
+            case .search:
+                Text("NoResults")
+                
+            case .searchInProgress:
+                ProgressView()
+            }
+        }
+        .frame(
+            maxWidth: .infinity,
+            maxHeight: .infinity
+        )
+        .foregroundColor(.gray)
     }
     
     private var resultList: some View {
         List {
-            ForEach(viewModel.translations) {
-                TranslationCell(translation: $0)
+            ForEach(viewModel.definitions) { definition in
+                
+                TranslationCell(translation: definition)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        viewModel.selectedDefinition = definition
+                        isCellTapped = true
+                    }
             }
+            .listRowBackground(Color.cell)
+        }
+        .onAppear() {
+            UITableView.appearance().backgroundColor = UIColor.clear
+        }
+    }
+    
+    private var navigationLink: some View {
+        NavigationLink(isActive: $isCellTapped) {
+            
+            viewModel.selectedDefinition.map {
+                TranslationDetailView(
+                    definitionItem: $0,
+                    isScreenOpen: $isCellTapped
+                )
+            }
+        } label: {
+            EmptyView()
         }
     }
 }

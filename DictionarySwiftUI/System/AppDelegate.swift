@@ -9,7 +9,7 @@ import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-    private let persistenceManager = PersistenceManager.shared
+    private let coreDataStorage = CoreDataStorage()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         debugPrint("didFinishLaunchingWithOptions")
@@ -17,8 +17,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        if persistenceManager.container.viewContext.hasChanges {
-            try? persistenceManager.container.viewContext.save()
-        }
+        coreDataStorage.saveContext()
     }
 }

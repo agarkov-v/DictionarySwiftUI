@@ -46,7 +46,6 @@ struct ContentView: View {
                                 TestRequest().testRequest()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                    print("|| tr: \(TestRequest().translation)")
                                 }
                                 self.user.score -= 1
                             }

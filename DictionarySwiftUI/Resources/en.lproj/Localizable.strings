@@ -19,3 +19,20 @@
 "CustomError" = "an incomprehensible error";
 
 "NoTranslation" = "There is no translation";
+"Search" = "Search...";
+"NoResults" = "No results";
+"ChooseLanguage" = "Choose language";
+"OnBack" = "Go back";
+
+"Translation" = "Translation";
+"Synonyms" = "Synonyms";
+"Meanings" = "Meanings";
+"Examples" = "Examples";
+
+"EmptyData" = "You haven't added a single word to your favorites yet";
+"CheckMemory" = "Check your memory";
+"Submit" = "Submit";
+"TranslateWord" = "Translate the Word";
+"Hint" = "Hint";
+"CorrectTranslation" = "The translation is correct! :)";
+"IncorrectTranslation" = "Incorrect... Try again or see the hint :(";

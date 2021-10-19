@@ -16,3 +16,23 @@
 "CustomError" = "непонятная ошибка";
 
 "NoTranslation" = "нет перевода";
+"Search" = "Поиск...";
+"NoResults" = "Нет результатов";
+"ChooseLanguage" = "Выберите язык";
+"OnBack" = "Вернуться";
+
+"Translation" = "Перевод";
+"Synonyms" = "Синонимы";
+"Meanings" = "Значения";
+"Examples" = "Примеры";
+
+"EmptyData" = "Вы пока еще не добавили ни одно слово в избранное";
+"CheckMemory" = "Проверьте свою память";
+"Submit" = "Подтвердить";
+"TranslateWord" = "Переведите слово";
+"Hint" = "Подсказка";
+"CorrectTranslation" = "Перевод правильный! :)";
+"IncorrectTranslation" = "Неправльно... Попробуйте еще или посмотрите подсказку :(";
+
+
+

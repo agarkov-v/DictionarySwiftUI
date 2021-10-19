@@ -16,9 +16,7 @@ class TestRequest {
     func testRequest() {
         
         cancellable.removeAll()
-        DataService.shared.requestTranslation(for: "кот",
-                                              fromLanguage: .russian,
-                                              toLanguage: .english)
+        DataService.shared.requestTranslation(for: "кот")
             .receive(on: DispatchQueue.main)
             .throttle(for: 0.5, scheduler: DispatchQueue.main, latest: true)
 //            .last()

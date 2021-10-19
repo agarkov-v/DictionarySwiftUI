@@ -9,6 +9,7 @@ import SwiftUI
 
 // MARK: Previews
 
+#if DEBUG
 struct TranslationCell_Previews: PreviewProvider {
     static var previews: some View {
         let mock = TranslationResponse.petMockData.definition.first!
@@ -27,26 +28,38 @@ struct TranslationCell_Previews: PreviewProvider {
         
     }
 }
+#endif
 
 // MARK: TranslationCell
 
 struct TranslationCell: View {
     
     let translation: DefinitionItem
-
+    
     var body: some View {
         HStack {
+            let smallInset: CGFloat = 5
+            let largeInset: CGFloat = 10
             Text("\(translation.text)")
                 .frame(maxWidth: .infinity)
-                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 5))
+                .padding(
+                    EdgeInsets(top: smallInset,
+                               leading: largeInset,
+                               bottom: smallInset,
+                               trailing: smallInset)
+                )
             
             Rectangle().fill(Color.gray).frame(width: 1)
             
             Text("\(translation.translations.first?.text ?? "NoTranslation")")
                 .frame(maxWidth: .infinity)
-                .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 10))
+                .padding(
+                    EdgeInsets(top: smallInset,
+                               leading: smallInset,
+                               bottom: smallInset,
+                               trailing: largeInset)
+                )
         }
-        
         .fixedSize(horizontal: false, vertical: true)
     }
 }

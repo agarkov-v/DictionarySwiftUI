@@ -7,47 +7,83 @@
 
 import SwiftUI
 
+#if DEBUG
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        Group {
+            MainTabView()
+                .preferredColorScheme(.light)
+                .previewDisplayName("Defult")
+            
+            MainTabView()
+                .preferredColorScheme(.dark)
+                .previewDisplayName("Dark Mode")
+        }
     }
 }
+#endif
 
 struct MainTabView: View {
     
-    @State private var selectedTab: TabItems = .main
+    // MARK: - Init
     
-    private let translationviewModel = TranslationViewModel()
-
-    var body: some View {
-        TabView(selection: $selectedTab) {
-            TranslationView(viewModel: translationviewModel).tabItem {
-                Label("menu", systemImage: "list.dash") }
-                .onTapGesture {
-                    selectedTab = .main
-                }
-                .tag(TabItems.main)
-            
-            testView().tabItem {
-                Label("2", systemImage: "circle") }
-                .onTapGesture {
-                    selectedTab = .search
-                }
-                .tag(TabItems.search)
-        }
-        .accentColor(.yellow)
-//        .onAppear() {
-//            UITabBar.appearance().barTintColor = .red
-//        }
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(Color.bar)
     }
     
+    // MARK: - Body
+    
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            translationView
+            gameView
+        }
+        .accentColor(Color.mainAccent)
+    }
+    
+    // MARK: - Private Properties
+    
+    @State private var selectedTab: TabItems = .main
+    
+    private var translationView: some View {
+        
+        return TranslationView()
+            .tabItem {
+                Label(
+                    "search",
+                    systemImage: "magnifyingglass"
+                )
+            }
+            .onTapGesture {
+                selectedTab = .main
+            }
+            .tag(TabItems.main)
+    }
+    
+    private var gameView: some View {
+        
+        return GameView()
+            .tabItem {
+                Label(
+                    "game",
+                    systemImage: "gamecontroller"
+                )
+            }
+            .onTapGesture {
+                selectedTab = .game
+            }
+            .tag(TabItems.game)
+    }
+    
+    
+    
 }
+
+//MARK: - TabItems
 
 private extension MainTabView {
     private enum TabItems {
         case main
-        case search
-        case collection
-        case other
+        case game
     }
 }
