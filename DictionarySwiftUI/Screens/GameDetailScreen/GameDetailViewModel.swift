@@ -37,9 +37,6 @@ class GameDetailViewModel: ObservableObject {
         let isCompate = definitionItem.translations.contains {
             $0.text.lowercased() == translationText.lowercased()
         }
-        
-        print("|| isCompate: \(isCompate)")
-        
         isTranslationCorrect = isCompate
     }
 }

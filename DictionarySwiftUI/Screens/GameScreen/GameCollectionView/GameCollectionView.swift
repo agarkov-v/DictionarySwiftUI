@@ -21,12 +21,13 @@ struct GameCollectionView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UICollectionView {
         let layout = UICollectionViewFlowLayout()
+        let inset: CGFloat = 20
         //        layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(
-            top: 10,
-            left: 10,
-            bottom: 10,
-            right: 10
+            top: inset,
+            left: inset,
+            bottom: inset,
+            right: inset
         )
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -37,7 +38,6 @@ struct GameCollectionView: UIViewRepresentable {
         
         collectionView.dataSource = context.coordinator
         collectionView.delegate = context.coordinator
-//        collectionView.isUserInteractionEnabled = true
         context.coordinator.collectionView = collectionView
         return collectionView
     }

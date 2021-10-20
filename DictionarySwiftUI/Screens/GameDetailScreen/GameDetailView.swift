@@ -45,9 +45,9 @@ struct GameDetailView: View {
                 Group {
                     definitionView
                     translationTextView
-                    if viewModel.isButtonTapped {
-                        compareView
-                    }
+                    compareView
+                        .opacity(viewModel.isButtonTapped ? 1 : 0)
+                        .animation(.default)
                     submitButtonView
                 }
                 .padding(
@@ -66,6 +66,16 @@ struct GameDetailView: View {
             
         }
         .navigationBarTitle("TranslateWord", displayMode: .large)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image("backArrow")
+                }
+            }
+        }
     }
     
     // MARK: - Init
@@ -77,7 +87,6 @@ struct GameDetailView: View {
     }
     
     // MARK: - Private Properties
-    @State private var isScreenOpen = false
     @StateObject private var viewModel: GameDetailViewModel
     @Environment(\.presentationMode) private var presentationMode
     
@@ -91,9 +100,7 @@ struct GameDetailView: View {
                     .font(Font.system(size: 30))
                 
                 NavigationLink {
-                    TranslationDetailView(
-                        definitionItem: viewModel.definitionItem,
-                        isScreenOpen: $isScreenOpen)
+                    TranslationDetailView(definitionItem: viewModel.definitionItem)
                 } label: {
                     Label(
                         "Hint",
@@ -118,7 +125,7 @@ struct GameDetailView: View {
     
     private var submitButtonView: some View {
         Button("Submit") {
-            viewModel.compareTranslation()
+                viewModel.compareTranslation()
         }
         .buttonStyle(MainButtonStyle())
         .padding(.top, 50)

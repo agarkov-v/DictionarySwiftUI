@@ -52,7 +52,6 @@
 		23EF8EC9271E03600055A393 /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EF8EC8271E03600055A393 /* EmptyDataView.swift */; };
 		23EF8ECB271E04E80055A393 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EF8ECA271E04E80055A393 /* GameViewModel.swift */; };
 		23EF8ECD271E2A290055A393 /* GameDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EF8ECC271E2A280055A393 /* GameDetailViewModel.swift */; };
-		23FB890926DEB4F800B97AEB /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FB890826DEB4F800B97AEB /* TestClass.swift */; };
 		CE2ABCAA26E7F0CD00ADD29E /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2ABCA926E7F0CD00ADD29E /* TranslationView.swift */; };
 		CE2ABCAD26E7F0E100ADD29E /* TranslationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2ABCAC26E7F0E100ADD29E /* TranslationCell.swift */; };
 		CE2ABCAF26E7F0EE00ADD29E /* TranslationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2ABCAE26E7F0EE00ADD29E /* TranslationViewModel.swift */; };
@@ -64,8 +63,6 @@
 		CE70767D26D395F800AAAB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767F26D395F800AAAB6A /* Localizable.strings */; };
 		CE8E948826CB941F0002CDDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E948726CB941F0002CDDB /* MainView.swift */; };
 		CE8E94A626CB99220002CDDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94A526CB99220002CDDB /* AppDelegate.swift */; };
-		CE8E94AD26CBFCAF0002CDDB /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */; };
-		CE8E94B026CC03590002CDDB /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E94AF26CC03590002CDDB /* testView.swift */; };
 		CEF3E0C726CF8EBB00C8C013 /* DefinitionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0C626CF8EBB00C8C013 /* DefinitionItem.swift */; };
 		CEF3E0CA26CF8FD800C8C013 /* TranslationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0C926CF8FD800C8C013 /* TranslationResponse.swift */; };
 		CEF3E0CC26CF973200C8C013 /* TranslationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0CB26CF973200C8C013 /* TranslationItem.swift */; };
@@ -126,7 +123,6 @@
 		23EF8EC8271E03600055A393 /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
 		23EF8ECA271E04E80055A393 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		23EF8ECC271E2A280055A393 /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
-		23FB890826DEB4F800B97AEB /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		CE2ABCA926E7F0CD00ADD29E /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		CE2ABCAC26E7F0E100ADD29E /* TranslationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCell.swift; sourceTree = "<group>"; };
 		CE2ABCAE26E7F0EE00ADD29E /* TranslationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewModel.swift; sourceTree = "<group>"; };
@@ -140,8 +136,6 @@
 		CE70767E26D395F800AAAB6A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE8E948726CB941F0002CDDB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CE8E94A526CB99220002CDDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		CE8E94AF26CC03590002CDDB /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		CEF3E0C626CF8EBB00C8C013 /* DefinitionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionItem.swift; sourceTree = "<group>"; };
 		CEF3E0C926CF8FD800C8C013 /* TranslationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationResponse.swift; sourceTree = "<group>"; };
 		CEF3E0CB26CF973200C8C013 /* TranslationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationItem.swift; sourceTree = "<group>"; };
@@ -541,11 +535,8 @@
 		CEF3E0F726CFDC7600C8C013 /* TestScreens */ = {
 			isa = PBXGroup;
 			children = (
-				23FB890826DEB4F800B97AEB /* TestClass.swift */,
 				CE58A30626A9DA6900121661 /* ContentView.swift */,
-				CE8E94AF26CC03590002CDDB /* testView.swift */,
 				23B2F09626F7C7DC00636819 /* TestView2.swift */,
-				CE8E94AC26CBFCAF0002CDDB /* ResultView.swift */,
 			);
 			path = TestScreens;
 			sourceTree = "<group>";
@@ -649,14 +640,12 @@
 				23889359270631EB004854F3 /* DefinitionItemManagedObject.swift in Sources */,
 				231C26F8271EFE7B0059A6B8 /* VerticalLabelStyle.swift in Sources */,
 				231C26FE271F0F2C0059A6B8 /* MainButtonStyle.swift in Sources */,
-				CE8E94B026CC03590002CDDB /* testView.swift in Sources */,
 				23B0C59926ED146700CC2743 /* SearchView.swift in Sources */,
 				2388935727062AB0004854F3 /* DefinitionCDStorageService.swift in Sources */,
 				CEF3E0FA26CFDD3900C8C013 /* Language.swift in Sources */,
 				23B0C59126ED12EB00CC2743 /* GameView.swift in Sources */,
 				CEF3E0CE26CF982900C8C013 /* SynonymItem.swift in Sources */,
 				23687DEA26DC2D16000DD9B8 /* DataService+Translate.swift in Sources */,
-				CE8E94AD26CBFCAF0002CDDB /* ResultView.swift in Sources */,
 				23B0C59526ED131600CC2743 /* GameDetailView.swift in Sources */,
 				2377FB00270F6EE500C31D2B /* View+DidLoad.swift in Sources */,
 				23B0C59726ED134E00CC2743 /* MoreView.swift in Sources */,
@@ -690,7 +679,6 @@
 				CEF3E0EB26CFD1C100C8C013 /* DictionaryItem.swift in Sources */,
 				CE58A30526A9DA6900121661 /* DictionarySwiftUIApp.swift in Sources */,
 				23B2F08A26F631D400636819 /* LanguageSelectionView.swift in Sources */,
-				23FB890926DEB4F800B97AEB /* TestClass.swift in Sources */,
 				2357146827175C750047A8E9 /* SynonymItemManagedObject.swift in Sources */,
 				2377FB072716EC0300C31D2B /* UINavigationController+Gesture.swift in Sources */,
 				232024E126F8CC890078475F /* DictionarySwiftUI.xcdatamodeld in Sources */,

@@ -20,6 +20,10 @@ class GameCollectionViewCoordinator: NSObject {
     
     private var parent: GameCollectionView
     
+    private let collectionPaddingInset: CGFloat = 20
+    private let minimumCollectionLineSpacing: CGFloat = 10
+    private let minimumCollectionInteritemSpacing: CGFloat = 5
+    
     // MARK: - Init
     
     init(
@@ -31,6 +35,15 @@ class GameCollectionViewCoordinator: NSObject {
         _isCellTapped = isCellTapped
         _selectedCellIndex = selectedCellIndex
     }
+    
+    // MARK: - Private Methods
+    
+    private func cellSize(for numberOfCellsInRow: Int) -> CGFloat {
+        let minInteritemSpacing = minimumCollectionInteritemSpacing * CGFloat((numberOfCellsInRow - 1))
+        let totalSpacing = collectionPaddingInset * 2 + minInteritemSpacing
+        let cellSize = ((collectionView?.bounds.width ?? 0) - totalSpacing) / CGFloat(numberOfCellsInRow)
+        return cellSize
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -38,7 +51,25 @@ class GameCollectionViewCoordinator: NSObject {
 extension GameCollectionViewCoordinator: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 100, height: 100)
+        let cellSize = cellSize(for: 3)
+        return CGSize(width: cellSize, height: cellSize)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(
+            top: collectionPaddingInset,
+            left: collectionPaddingInset,
+            bottom: collectionPaddingInset,
+            right: collectionPaddingInset
+        )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        minimumCollectionLineSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        minimumCollectionInteritemSpacing
     }
 }
 
@@ -63,13 +94,6 @@ extension GameCollectionViewCoordinator: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension GameCollectionViewCoordinator: UICollectionViewDelegate {
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("|| tap")
-//        let post = self.parent.dataSearch[indexPath.item]
-//        parent.didSelectItem(indexPath)
-//        parent.didSelectObject(post)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         isCellTapped.toggle()

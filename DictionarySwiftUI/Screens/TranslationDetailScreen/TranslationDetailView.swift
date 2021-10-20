@@ -16,17 +16,11 @@ struct TranslationDetailScreenView_Previews: PreviewProvider {
         let definitionItem = TranslationResponse.petMockData.definition.first!
         
         Group {
-            TranslationDetailView(
-                definitionItem: definitionItem,
-                isScreenOpen: .constant(true)
-            )
+            TranslationDetailView(definitionItem: definitionItem)
                 .preferredColorScheme(.light)
                 .previewDisplayName("Defult")
             
-            TranslationDetailView(
-                definitionItem: definitionItem,
-                isScreenOpen: .constant(true)
-            )
+            TranslationDetailView(definitionItem: definitionItem)
                 .environment(\.locale, Locale.init(identifier: "ru"))
                 .preferredColorScheme(.dark)
                 .previewDisplayName("Dark Mode")
@@ -40,8 +34,6 @@ struct TranslationDetailScreenView_Previews: PreviewProvider {
 struct TranslationDetailView: View {
     
     // MARK: - Public Properties
-    
-    @Binding var isScreenOpen: Bool
     
     // MARK: - Body
     
@@ -64,8 +56,10 @@ struct TranslationDetailView: View {
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button("◀ \("OnBack".localized)") {
-                    isScreenOpen.toggle()
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image("backArrow")
                 }
             }
         }
@@ -74,18 +68,17 @@ struct TranslationDetailView: View {
     // MARK: - Init
     
     init(
-        definitionItem: DefinitionItem,
-        isScreenOpen: Binding<Bool>
+        definitionItem: DefinitionItem
     ) {
         _viewModel = StateObject(
             wrappedValue: TranslationDetailViewModel(definitionItem: definitionItem)
         )
-        _isScreenOpen = isScreenOpen
     }
     
     // MARK: - Private Properties
     
     @StateObject private var viewModel: TranslationDetailViewModel
+    @Environment(\.presentationMode) private var presentationMode
     
     // MARK: - Views
     

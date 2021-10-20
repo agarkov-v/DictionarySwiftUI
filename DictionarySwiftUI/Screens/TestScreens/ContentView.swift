@@ -43,10 +43,6 @@ struct ContentView: View {
                     trailing:
                         HStack {
                             Button("Subtract 1") {
-                                TestRequest().testRequest()
-                                
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                }
                                 self.user.score -= 1
                             }
                             Button("Add 1") {

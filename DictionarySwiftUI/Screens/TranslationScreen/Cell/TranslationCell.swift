@@ -38,27 +38,16 @@ struct TranslationCell: View {
     
     var body: some View {
         HStack {
-            let smallInset: CGFloat = 5
-            let largeInset: CGFloat = 10
+            let inset: CGFloat = 5
             Text("\(translation.text)")
                 .frame(maxWidth: .infinity)
-                .padding(
-                    EdgeInsets(top: smallInset,
-                               leading: largeInset,
-                               bottom: smallInset,
-                               trailing: smallInset)
-                )
+                .padding(.all, inset)
             
             Rectangle().fill(Color.gray).frame(width: 1)
             
             Text("\(translation.translations.first?.text ?? "NoTranslation")")
                 .frame(maxWidth: .infinity)
-                .padding(
-                    EdgeInsets(top: smallInset,
-                               leading: smallInset,
-                               bottom: smallInset,
-                               trailing: largeInset)
-                )
+                .padding(.all, inset)
         }
         .fixedSize(horizontal: false, vertical: true)
     }

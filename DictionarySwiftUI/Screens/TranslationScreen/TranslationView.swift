@@ -119,10 +119,7 @@ struct TranslationView: View {
         NavigationLink(isActive: $isCellTapped) {
             
             viewModel.selectedDefinition.map {
-                TranslationDetailView(
-                    definitionItem: $0,
-                    isScreenOpen: $isCellTapped
-                )
+                TranslationDetailView(definitionItem: $0)
             }
         } label: {
             EmptyView()
