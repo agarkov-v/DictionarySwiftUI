@@ -83,6 +83,7 @@ struct SearchView: View {
             Button(viewModel.translateFromLanguage.rawValue) {
                 isFromButtonTapped.toggle()
             }
+			.accessibilityIdentifier("translateFromLanguageButton")
             .frame(maxWidth: .infinity)
             .sheet(
                 isPresented: $isFromButtonTapped,
@@ -94,6 +95,7 @@ struct SearchView: View {
             Button(viewModel.translateToLanguage.rawValue) {
                 isToButtonTapped.toggle()
             }
+			.accessibilityIdentifier("translateToLanguageButton")
             .frame(maxWidth: .infinity)
             .sheet(
                 isPresented: $isToButtonTapped,
@@ -113,6 +115,7 @@ struct SearchView: View {
             LocalizedStringKey("Search"),
             text: $searchText
         )
+			.accessibilityIdentifier("searchTextField")
             .textFieldStyle(MainTextFieldStyle(backroundColor: Color.background))
             .padding(.trailing, searchText.isEmpty ? 40 : 0)
     }
@@ -123,7 +126,7 @@ struct SearchView: View {
         } label: {
             Image(systemName: "xmark.circle")
         }
-//        .padding()
+		.accessibilityIdentifier("clearButton")
         .frame(width: 40, height: 40)
 
     }

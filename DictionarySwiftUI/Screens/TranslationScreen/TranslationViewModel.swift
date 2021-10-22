@@ -54,14 +54,6 @@ class TranslationViewModel: ObservableObject {
         }
     }
     
-    func onDeleteItem(at indexSet: IndexSet) {
-        indexSet.forEach {
-            definitionInteractor.deleteFromFavourites(definitions[$0])
-        }
-        definitions.remove(atOffsets: indexSet)
-        loadLocalData()
-    }
-    
     // MARK: - Private Methods
     
     private func performSearch() {
@@ -101,9 +93,9 @@ class TranslationViewModel: ObservableObject {
                 }
             )
             .sink(
-                receiveCompletion: { error in
-                    debugPrint("receiveCompletion: \(error)")
-                    switch error {
+                receiveCompletion: { completion in
+                    debugPrint("receiveCompletion: \(completion)")
+                    switch completion {
                     case .failure(let failError):
                         debugPrint("search error: \(failError.localizedDescription) | \(failError)")
                     case .finished:
@@ -122,7 +114,7 @@ class TranslationViewModel: ObservableObject {
 // MARK: - Enum
 
 extension TranslationViewModel {
-     enum State {
+    enum State {
         case local
         case searchInProgress
         case search

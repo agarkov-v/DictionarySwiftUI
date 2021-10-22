@@ -61,6 +61,7 @@ struct TranslationDetailView: View {
                 } label: {
                     Image("backArrow")
                 }
+				.accessibilityIdentifier("backButton")
             }
         }
     }
@@ -85,6 +86,7 @@ struct TranslationDetailView: View {
     private var wordView: some View {
         HStack(spacing: .zero) {
             Text(viewModel.definitionItem.text)
+				.accessibilityIdentifier("titleLabel")
                 .font(.system(size: 25, weight: .semibold))
             
             Spacer()
@@ -95,6 +97,7 @@ struct TranslationDetailView: View {
                 }, label: {
                     Image(systemName: viewModel.isFavorite ? "star.fill" : "star")
                 })
+					.accessibilityIdentifier("favoriteButton")
                     .padding()
                 Spacer()
             }

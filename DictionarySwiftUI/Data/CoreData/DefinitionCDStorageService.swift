@@ -15,6 +15,7 @@ protocol DefinitionCDStorageServiceProtocol {
     func addDefinition(_ definition: DefinitionItem)
     func deleteDefinition(with id: String)
     func fetchAllDefenitions() -> [DefinitionItemManagedObject]
+	func deleteAllDefinitions()
 }
 
 class DefinitionCDStorageService: DefinitionCDStorageServiceProtocol {
@@ -56,6 +57,13 @@ class DefinitionCDStorageService: DefinitionCDStorageServiceProtocol {
         definition.forEach { coreDataStorage.mainContext.delete($0) }
         coreDataStorage.saveContext()
     }
+	
+	func deleteAllDefinitions() {
+		let defenitions = fetchAllDefenitions()
+		defenitions.forEach {
+			deleteDefinition(with: $0.id)
+		}
+	}
     
     func fetchAllDefenitions() -> [DefinitionItemManagedObject] {
         let request: NSFetchRequest<DefinitionItemManagedObject> = DefinitionItemManagedObject.fetchRequest()

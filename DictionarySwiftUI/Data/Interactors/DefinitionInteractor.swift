@@ -12,6 +12,7 @@ protocol DefinitionInteractorProtocol {
     func isSavedToFavourites(_ definition: DefinitionItem) -> Bool
     func deleteFromFavourites(_ definition: DefinitionItem)
     func getAll() -> [DefinitionItem]
+	func deleteAll()
 }
 
 class DefinitionInteractor: DefinitionInteractorProtocol {
@@ -48,4 +49,8 @@ class DefinitionInteractor: DefinitionInteractorProtocol {
         let items = fetchedItems.map { $0.toDomain() }
         return items
     }
+	
+	func deleteAll() {
+		coreDataStorage.deleteAllDefinitions()
+	}
 }

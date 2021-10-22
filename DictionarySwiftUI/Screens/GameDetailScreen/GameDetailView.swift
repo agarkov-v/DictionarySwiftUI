@@ -45,9 +45,12 @@ struct GameDetailView: View {
                 Group {
                     definitionView
                     translationTextView
+                    
                     compareView
+                        .accessibilityIdentifier("compareMessage")
                         .opacity(viewModel.isButtonTapped ? 1 : 0)
                         .animation(.default)
+                    
                     submitButtonView
                 }
                 .padding(
@@ -109,6 +112,7 @@ struct GameDetailView: View {
                         .font(Font.system(size: 10))
                         .labelStyle(VerticalLabelStyle())
                 }
+                .accessibilityIdentifier("hintLink")
             }
             
             Spacer()
@@ -125,9 +129,10 @@ struct GameDetailView: View {
     
     private var submitButtonView: some View {
         Button("Submit") {
-                viewModel.compareTranslation()
+            viewModel.compareTranslation()
         }
         .buttonStyle(MainButtonStyle())
+        .accessibilityIdentifier("submitButton")
         .padding(.top, 50)
     }
     
@@ -137,7 +142,7 @@ struct GameDetailView: View {
                 "CorrectTranslation",
                 systemImage: "checkmark.circle"
             )
-                .frame(maxWidth: .infinity)
+                .font(Font.system(size: 12))
                 .foregroundColor(.green)
             
             
@@ -146,7 +151,7 @@ struct GameDetailView: View {
                 "IncorrectTranslation",
                 systemImage: "xmark.circle"
             )
-                .frame(maxWidth: .infinity)
+                .font(Font.system(size: 12))
                 .foregroundColor(.red)
         }
     }
