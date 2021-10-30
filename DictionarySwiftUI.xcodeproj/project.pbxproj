@@ -30,7 +30,6 @@
 		2388935727062AB0004854F3 /* DefinitionCDStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388935627062AB0004854F3 /* DefinitionCDStorageService.swift */; };
 		23889359270631EB004854F3 /* DefinitionItemManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23889358270631EB004854F3 /* DefinitionItemManagedObject.swift */; };
 		2388936027063A32004854F3 /* DefinitionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388935F27063A32004854F3 /* DefinitionInteractor.swift */; };
-		2388937A270B8CA3004854F3 /* InteracrorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23889379270B8CA3004854F3 /* InteracrorLayer.swift */; };
 		2388937C270C6DC3004854F3 /* Color+Pallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388937B270C6DC3004854F3 /* Color+Pallette.swift */; };
 		2388937E270C6DEC004854F3 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388937D270C6DEC004854F3 /* Color+Hex.swift */; };
 		23889380270C7D82004854F3 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388937F270C7D82004854F3 /* UIColor+Hex.swift */; };
@@ -39,7 +38,6 @@
 		23B0C58F26ED127D00CC2743 /* TranslationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C58E26ED127D00CC2743 /* TranslationDetailView.swift */; };
 		23B0C59126ED12EB00CC2743 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C59026ED12EB00CC2743 /* GameView.swift */; };
 		23B0C59526ED131600CC2743 /* GameDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C59426ED131600CC2743 /* GameDetailView.swift */; };
-		23B0C59726ED134E00CC2743 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C59626ED134E00CC2743 /* MoreView.swift */; };
 		23B0C59926ED146700CC2743 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B0C59826ED146700CC2743 /* SearchView.swift */; };
 		23B2F08526F6281C00636819 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2F08426F6281C00636819 /* UserSettings.swift */; };
 		23B2F08A26F631D400636819 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2F08926F631D400636819 /* LanguageSelectionView.swift */; };
@@ -55,10 +53,38 @@
 		CE2ABCAA26E7F0CD00ADD29E /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2ABCA926E7F0CD00ADD29E /* TranslationView.swift */; };
 		CE2ABCAD26E7F0E100ADD29E /* TranslationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2ABCAC26E7F0E100ADD29E /* TranslationCell.swift */; };
 		CE2ABCAF26E7F0EE00ADD29E /* TranslationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2ABCAE26E7F0EE00ADD29E /* TranslationViewModel.swift */; };
+		CE361423272AB66E0043E37E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE361422272AB66E0043E37E /* WidgetKit.framework */; };
+		CE361425272AB66E0043E37E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE361424272AB66E0043E37E /* SwiftUI.framework */; };
+		CE361428272AB66E0043E37E /* DictionaryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE361427272AB66E0043E37E /* DictionaryWidget.swift */; };
+		CE36142B272AB66F0043E37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE36142A272AB66F0043E37E /* Assets.xcassets */; };
+		CE36142D272AB66F0043E37E /* DictionaryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CE361429272AB66E0043E37E /* DictionaryWidget.intentdefinition */; };
+		CE361431272AB66F0043E37E /* DictionaryWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CE361420272AB66E0043E37E /* DictionaryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE361437272AC4870043E37E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE361436272AC4870043E37E /* Provider.swift */; };
+		CE361439272AC4AC0043E37E /* WidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE361438272AC4AC0043E37E /* WidgetEntry.swift */; };
+		CE36143B272AC4BB0043E37E /* DictionaryWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36143A272AC4BB0043E37E /* DictionaryWidgetEntryView.swift */; };
+		CE36143E272AC9BD0043E37E /* DefinitionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0C626CF8EBB00C8C013 /* DefinitionItem.swift */; };
+		CE36143F272AC9CB0043E37E /* TranslationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0CB26CF973200C8C013 /* TranslationItem.swift */; };
+		CE361440272AC9CE0043E37E /* SynonymItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0CD26CF982900C8C013 /* SynonymItem.swift */; };
+		CE361441272AC9D00043E37E /* MeaningItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0CF26CF983100C8C013 /* MeaningItem.swift */; };
+		CE361442272AC9D30043E37E /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0D126CF983A00C8C013 /* ExampleItem.swift */; };
+		CE361443272ACB600043E37E /* TranslationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0C926CF8FD800C8C013 /* TranslationResponse.swift */; };
+		CE361444272ACB720043E37E /* TranslateResponseFriendMock.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF3E0E226CFC9DB00C8C013 /* TranslateResponseFriendMock.json */; };
+		CE361445272ACB750043E37E /* TranslateResponsePetMock.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF3E0EC26CFD28A00C8C013 /* TranslateResponsePetMock.json */; };
+		CE361446272ACB8B0043E37E /* LocalDataLoadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0E726CFCBF200C8C013 /* LocalDataLoadHelper.swift */; };
+		CE361447272ACBA90043E37E /* DefinitionItemManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23889358270631EB004854F3 /* DefinitionItemManagedObject.swift */; };
+		CE361448272ACBAC0043E37E /* TranslationItemManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2357146927175C800047A8E9 /* TranslationItemManagedObject.swift */; };
+		CE361449272ACBAE0043E37E /* SynonymItemManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2357146727175C750047A8E9 /* SynonymItemManagedObject.swift */; };
+		CE36144A272ACBB10043E37E /* MeaningItemManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2357146527175C620047A8E9 /* MeaningItemManagedObject.swift */; };
+		CE36144B272ACBB30043E37E /* ExampleItemManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2357146327175BD90047A8E9 /* ExampleItemManagedObject.swift */; };
+		CE361458272ADF260043E37E /* DictionaryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CE361429272AB66E0043E37E /* DictionaryWidget.intentdefinition */; };
+		CE361459272AE3F20043E37E /* InteracrorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23889379270B8CA3004854F3 /* InteracrorLayer.swift */; };
+		CE36145C272AEFEF0043E37E /* WidgetEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36145B272AEFEF0043E37E /* WidgetEntryViewModel.swift */; };
 		CE58A30526A9DA6900121661 /* DictionarySwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58A30426A9DA6900121661 /* DictionarySwiftUIApp.swift */; };
 		CE58A30726A9DA6900121661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58A30626A9DA6900121661 /* ContentView.swift */; };
 		CE58A30926A9DA6A00121661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58A30826A9DA6A00121661 /* Assets.xcassets */; };
 		CE58A30C26A9DA6A00121661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE58A30B26A9DA6A00121661 /* Preview Assets.xcassets */; };
+		CE59EF13272D7AA90000978D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767A26D395E200AAAB6A /* Localizable.strings */; };
+		CE59EF14272D7AAD0000978D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767F26D395F800AAAB6A /* Localizable.strings */; };
 		CE70767826D395E200AAAB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767A26D395E200AAAB6A /* Localizable.strings */; };
 		CE70767D26D395F800AAAB6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE70767F26D395F800AAAB6A /* Localizable.strings */; };
 		CE8E948826CB941F0002CDDB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E948726CB941F0002CDDB /* MainView.swift */; };
@@ -75,13 +101,19 @@
 		CEF3E0D226CF983A00C8C013 /* ExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0D126CF983A00C8C013 /* ExampleItem.swift */; };
 		CEF3E0E426CFC9DC00C8C013 /* TranslateResponseFriendMock.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF3E0E226CFC9DB00C8C013 /* TranslateResponseFriendMock.json */; };
 		CEF3E0E826CFCBF200C8C013 /* LocalDataLoadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0E726CFCBF200C8C013 /* LocalDataLoadHelper.swift */; };
-		CEF3E0EB26CFD1C100C8C013 /* DictionaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0EA26CFD1C100C8C013 /* DictionaryItem.swift */; };
 		CEF3E0ED26CFD28A00C8C013 /* TranslateResponsePetMock.json in Resources */ = {isa = PBXBuildFile; fileRef = CEF3E0EC26CFD28A00C8C013 /* TranslateResponsePetMock.json */; };
 		CEF3E0F026CFDAD400C8C013 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0EF26CFDAD400C8C013 /* Array+Extensions.swift */; };
 		CEF3E0FA26CFDD3900C8C013 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3E0F926CFDD3900C8C013 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE36142F272AB66F0043E37E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE58A2F926A9DA6900121661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE36141F272AB66E0043E37E;
+			remoteInfo = DictionaryWidgetExtension;
+		};
 		CE985B7E272162B90019DEBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE58A2F926A9DA6900121661 /* Project object */;
@@ -97,6 +129,20 @@
 			remoteInfo = DictionarySwiftUI;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE361432272AB66F0043E37E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE361431272AB66F0043E37E /* DictionaryWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		231C26F7271EFE7B0059A6B8 /* VerticalLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLabelStyle.swift; sourceTree = "<group>"; };
@@ -131,7 +177,6 @@
 		23B0C58E26ED127D00CC2743 /* TranslationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationDetailView.swift; sourceTree = "<group>"; };
 		23B0C59026ED12EB00CC2743 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		23B0C59426ED131600CC2743 /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
-		23B0C59626ED134E00CC2743 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		23B0C59826ED146700CC2743 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		23B2F08426F6281C00636819 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		23B2F08926F631D400636819 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
@@ -147,6 +192,17 @@
 		CE2ABCA926E7F0CD00ADD29E /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		CE2ABCAC26E7F0E100ADD29E /* TranslationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationCell.swift; sourceTree = "<group>"; };
 		CE2ABCAE26E7F0EE00ADD29E /* TranslationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewModel.swift; sourceTree = "<group>"; };
+		CE361420272AB66E0043E37E /* DictionaryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DictionaryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE361422272AB66E0043E37E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CE361424272AB66E0043E37E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CE361427272AB66E0043E37E /* DictionaryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWidget.swift; sourceTree = "<group>"; };
+		CE361429272AB66E0043E37E /* DictionaryWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DictionaryWidget.intentdefinition; sourceTree = "<group>"; };
+		CE36142A272AB66F0043E37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE36142C272AB66F0043E37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE361436272AC4870043E37E /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		CE361438272AC4AC0043E37E /* WidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEntry.swift; sourceTree = "<group>"; };
+		CE36143A272AC4BB0043E37E /* DictionaryWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWidgetEntryView.swift; sourceTree = "<group>"; };
+		CE36145B272AEFEF0043E37E /* WidgetEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEntryViewModel.swift; sourceTree = "<group>"; };
 		CE58A30126A9DA6900121661 /* DictionarySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionarySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE58A30426A9DA6900121661 /* DictionarySwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySwiftUIApp.swift; sourceTree = "<group>"; };
 		CE58A30626A9DA6900121661 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,13 +227,21 @@
 		CEF3E0D126CF983A00C8C013 /* ExampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleItem.swift; sourceTree = "<group>"; };
 		CEF3E0E226CFC9DB00C8C013 /* TranslateResponseFriendMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TranslateResponseFriendMock.json; sourceTree = "<group>"; };
 		CEF3E0E726CFCBF200C8C013 /* LocalDataLoadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataLoadHelper.swift; sourceTree = "<group>"; };
-		CEF3E0EA26CFD1C100C8C013 /* DictionaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryItem.swift; sourceTree = "<group>"; };
 		CEF3E0EC26CFD28A00C8C013 /* TranslateResponsePetMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TranslateResponsePetMock.json; sourceTree = "<group>"; };
 		CEF3E0EF26CFDAD400C8C013 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		CEF3E0F926CFDD3900C8C013 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE36141D272AB66E0043E37E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE361425272AB66E0043E37E /* SwiftUI.framework in Frameworks */,
+				CE361423272AB66E0043E37E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE58A2FE26A9DA6900121661 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,12 +454,54 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CE361421272AB66E0043E37E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE361422272AB66E0043E37E /* WidgetKit.framework */,
+				CE361424272AB66E0043E37E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE361426272AB66E0043E37E /* DictionaryWidget */ = {
+			isa = PBXGroup;
+			children = (
+				CE361427272AB66E0043E37E /* DictionaryWidget.swift */,
+				CE36145D272AF2590043E37E /* WidgetEntry */,
+				CE361438272AC4AC0043E37E /* WidgetEntry.swift */,
+				CE361436272AC4870043E37E /* Provider.swift */,
+				CE36142C272AB66F0043E37E /* Info.plist */,
+				CE361429272AB66E0043E37E /* DictionaryWidget.intentdefinition */,
+				CE36142A272AB66F0043E37E /* Assets.xcassets */,
+				CE36143C272AC53D0043E37E /* Resources */,
+			);
+			path = DictionaryWidget;
+			sourceTree = "<group>";
+		};
+		CE36143C272AC53D0043E37E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE36145D272AF2590043E37E /* WidgetEntry */ = {
+			isa = PBXGroup;
+			children = (
+				CE36143A272AC4BB0043E37E /* DictionaryWidgetEntryView.swift */,
+				CE36145B272AEFEF0043E37E /* WidgetEntryViewModel.swift */,
+			);
+			path = WidgetEntry;
+			sourceTree = "<group>";
+		};
 		CE58A2F826A9DA6900121661 = {
 			isa = PBXGroup;
 			children = (
 				CE58A30326A9DA6900121661 /* DictionarySwiftUI */,
 				CE985B7B272162B90019DEBA /* DictionarySwiftUITests */,
 				CE985B8C2721C4FE0019DEBA /* DictionarySwiftUIUITests */,
+				CE361426272AB66E0043E37E /* DictionaryWidget */,
+				CE361421272AB66E0043E37E /* Frameworks */,
 				CE58A30226A9DA6900121661 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -406,6 +512,7 @@
 				CE58A30126A9DA6900121661 /* DictionarySwiftUI.app */,
 				CE985B7A272162B90019DEBA /* DictionarySwiftUITests.xctest */,
 				CE985B8B2721C4FE0019DEBA /* DictionarySwiftUIUITests.xctest */,
+				CE361420272AB66E0043E37E /* DictionaryWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -457,7 +564,6 @@
 				23B0C58B26ED125000CC2743 /* TranslationDetailScreen */,
 				CEF3E0F326CFDBDE00C8C013 /* GameScreen */,
 				CEF3E0F526CFDC1800C8C013 /* GameDetailScreen */,
-				CEF3E0F226CFDBDC00C8C013 /* MoreScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -485,7 +591,6 @@
 				235714952719CFCA0047A8E9 /* SynonymItem */,
 				235714972719CFDB0047A8E9 /* MeaningItem */,
 				235714962719CFD80047A8E9 /* ExampleItem */,
-				CEF3E0EA26CFD1C100C8C013 /* DictionaryItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -568,14 +673,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CEF3E0F226CFDBDC00C8C013 /* MoreScreen */ = {
-			isa = PBXGroup;
-			children = (
-				23B0C59626ED134E00CC2743 /* MoreView.swift */,
-			);
-			path = MoreScreen;
-			sourceTree = "<group>";
-		};
 		CEF3E0F326CFDBDE00C8C013 /* GameScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +713,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE36141F272AB66E0043E37E /* DictionaryWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE361435272AB66F0043E37E /* Build configuration list for PBXNativeTarget "DictionaryWidgetExtension" */;
+			buildPhases = (
+				CE36141C272AB66E0043E37E /* Sources */,
+				CE36141D272AB66E0043E37E /* Frameworks */,
+				CE36141E272AB66E0043E37E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DictionaryWidgetExtension;
+			productName = DictionaryWidgetExtension;
+			productReference = CE361420272AB66E0043E37E /* DictionaryWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CE58A30026A9DA6900121661 /* DictionarySwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE58A31026A9DA6A00121661 /* Build configuration list for PBXNativeTarget "DictionarySwiftUI" */;
@@ -623,10 +737,12 @@
 				CE58A2FD26A9DA6900121661 /* Sources */,
 				CE58A2FE26A9DA6900121661 /* Frameworks */,
 				CE58A2FF26A9DA6900121661 /* Resources */,
+				CE361432272AB66F0043E37E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE361430272AB66F0043E37E /* PBXTargetDependency */,
 			);
 			name = DictionarySwiftUI;
 			productName = DictionarySwiftUI;
@@ -675,9 +791,12 @@
 		CE58A2F926A9DA6900121661 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					CE36141F272AB66E0043E37E = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					CE58A30026A9DA6900121661 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -708,11 +827,24 @@
 				CE58A30026A9DA6900121661 /* DictionarySwiftUI */,
 				CE985B79272162B90019DEBA /* DictionarySwiftUITests */,
 				CE985B8A2721C4FE0019DEBA /* DictionarySwiftUIUITests */,
+				CE36141F272AB66E0043E37E /* DictionaryWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE36141E272AB66E0043E37E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE59EF14272D7AAD0000978D /* Localizable.strings in Resources */,
+				CE361444272ACB720043E37E /* TranslateResponseFriendMock.json in Resources */,
+				CE59EF13272D7AA90000978D /* Localizable.strings in Resources */,
+				CE36142B272AB66F0043E37E /* Assets.xcassets in Resources */,
+				CE361445272ACB750043E37E /* TranslateResponsePetMock.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE58A2FF26A9DA6900121661 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -743,6 +875,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE36141C272AB66E0043E37E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE361440272AC9CE0043E37E /* SynonymItem.swift in Sources */,
+				CE361446272ACB8B0043E37E /* LocalDataLoadHelper.swift in Sources */,
+				CE361439272AC4AC0043E37E /* WidgetEntry.swift in Sources */,
+				CE361437272AC4870043E37E /* Provider.swift in Sources */,
+				CE36142D272AB66F0043E37E /* DictionaryWidget.intentdefinition in Sources */,
+				CE36143B272AC4BB0043E37E /* DictionaryWidgetEntryView.swift in Sources */,
+				CE361442272AC9D30043E37E /* ExampleItem.swift in Sources */,
+				CE36145C272AEFEF0043E37E /* WidgetEntryViewModel.swift in Sources */,
+				CE361448272ACBAC0043E37E /* TranslationItemManagedObject.swift in Sources */,
+				CE36143F272AC9CB0043E37E /* TranslationItem.swift in Sources */,
+				CE361441272AC9D00043E37E /* MeaningItem.swift in Sources */,
+				CE361447272ACBA90043E37E /* DefinitionItemManagedObject.swift in Sources */,
+				CE36144A272ACBB10043E37E /* MeaningItemManagedObject.swift in Sources */,
+				CE361443272ACB600043E37E /* TranslationResponse.swift in Sources */,
+				CE36144B272ACBB30043E37E /* ExampleItemManagedObject.swift in Sources */,
+				CE361428272AB66E0043E37E /* DictionaryWidget.swift in Sources */,
+				CE361449272ACBAE0043E37E /* SynonymItemManagedObject.swift in Sources */,
+				CE36143E272AC9BD0043E37E /* DefinitionItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE58A2FD26A9DA6900121661 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -763,6 +920,8 @@
 				23889359270631EB004854F3 /* DefinitionItemManagedObject.swift in Sources */,
 				231C26F8271EFE7B0059A6B8 /* VerticalLabelStyle.swift in Sources */,
 				231C26FE271F0F2C0059A6B8 /* MainButtonStyle.swift in Sources */,
+				CE361459272AE3F20043E37E /* InteracrorLayer.swift in Sources */,
+				CE361458272ADF260043E37E /* DictionaryWidget.intentdefinition in Sources */,
 				23B0C59926ED146700CC2743 /* SearchView.swift in Sources */,
 				2388935727062AB0004854F3 /* DefinitionCDStorageService.swift in Sources */,
 				CEF3E0FA26CFDD3900C8C013 /* Language.swift in Sources */,
@@ -771,7 +930,6 @@
 				23687DEA26DC2D16000DD9B8 /* DataService+Translate.swift in Sources */,
 				23B0C59526ED131600CC2743 /* GameDetailView.swift in Sources */,
 				2377FB00270F6EE500C31D2B /* View+DidLoad.swift in Sources */,
-				23B0C59726ED134E00CC2743 /* MoreView.swift in Sources */,
 				231C26FC271F0DF70059A6B8 /* View+Placeholder.swift in Sources */,
 				23EF8EBD271C1A760055A393 /* UICollectionViewCell+ReuseIdentifier.swift in Sources */,
 				2377FAD2270CBC2200C31D2B /* SearchViewModel.swift in Sources */,
@@ -790,7 +948,6 @@
 				238893552706299D004854F3 /* CoreDataStorage.swift in Sources */,
 				23B2F08526F6281C00636819 /* UserSettings.swift in Sources */,
 				CEF3E0E826CFCBF200C8C013 /* LocalDataLoadHelper.swift in Sources */,
-				2388937A270B8CA3004854F3 /* InteracrorLayer.swift in Sources */,
 				CE8E948826CB941F0002CDDB /* MainView.swift in Sources */,
 				2388938E270C9F0C004854F3 /* LanguageCell.swift in Sources */,
 				231C26FA271F0A2A0059A6B8 /* MainTextFieldStyle.swift in Sources */,
@@ -799,7 +956,6 @@
 				23571461271754EF0047A8E9 /* String+Localized.swift in Sources */,
 				23EF8EC9271E03600055A393 /* EmptyDataView.swift in Sources */,
 				23EF8ECB271E04E80055A393 /* GameViewModel.swift in Sources */,
-				CEF3E0EB26CFD1C100C8C013 /* DictionaryItem.swift in Sources */,
 				CE58A30526A9DA6900121661 /* DictionarySwiftUIApp.swift in Sources */,
 				23B2F08A26F631D400636819 /* LanguageSelectionView.swift in Sources */,
 				2357146827175C750047A8E9 /* SynonymItemManagedObject.swift in Sources */,
@@ -833,6 +989,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE361430272AB66F0043E37E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE36141F272AB66E0043E37E /* DictionaryWidgetExtension */;
+			targetProxy = CE36142F272AB66F0043E37E /* PBXContainerItemProxy */;
+		};
 		CE985B7F272162B90019DEBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE58A30026A9DA6900121661 /* DictionarySwiftUI */;
@@ -865,6 +1026,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE361433272AB66F0043E37E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = DictionaryWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 674395HGU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DictionaryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DictionaryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Agarkov.DictionarySwiftUI.DictionaryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE361434272AB66F0043E37E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = DictionaryWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 674395HGU2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DictionaryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DictionaryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Agarkov.DictionarySwiftUI.DictionaryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CE58A30E26A9DA6A00121661 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -986,12 +1211,14 @@
 		CE58A31126A9DA6A00121661 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DictionarySwiftUI/DictionarySwiftUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DictionarySwiftUI/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 3S5R8NK9K6;
+				DEVELOPMENT_TEAM = 674395HGU2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DictionarySwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1010,12 +1237,14 @@
 		CE58A31226A9DA6A00121661 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DictionarySwiftUI/DictionarySwiftUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DictionarySwiftUI/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 3S5R8NK9K6;
+				DEVELOPMENT_TEAM = 674395HGU2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DictionarySwiftUI/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1132,6 +1361,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE361435272AB66F0043E37E /* Build configuration list for PBXNativeTarget "DictionaryWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE361433272AB66F0043E37E /* Debug */,
+				CE361434272AB66F0043E37E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE58A2FC26A9DA6900121661 /* Build configuration list for PBXProject "DictionarySwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

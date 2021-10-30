@@ -27,22 +27,13 @@ struct DefinitionItem: Codable, Identifiable, Hashable  {
 
 extension DefinitionItem {
     
-//    static func fill(with definitionItemMO: DefinitionItemManagedObject) -> DefinitionItem {
-//
-//        let translationItemMOs = definitionItemMO.translations.array as? [TranslationItemManagedObject]
-//
-//        let translations = translationItemMOs?.compactMap {
-//            TranslationItem.fill(with: $0)
-//        }
-//
-//        let definitionItem = DefinitionItem(
-//            text: definitionItemMO.text,
-//            position: definitionItemMO.position,
-//            translations: translations ?? []
-//        )
-//
-//        return definitionItem
-//    }
+	var translationString: String {
+		let translations = translations.map {
+			$0.text
+		}
+		let translationsString = translations.joined(separator: ", ")
+		return translationsString
+	}
     
     static func fill(with definitionItemMO: DefinitionItemManagedObject) -> DefinitionItem {
         

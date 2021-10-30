@@ -21,6 +21,13 @@ struct TranslationResponse: Codable {
 extension TranslationResponse {
     
     static let emptyResponse = TranslationResponse(definition: [])
+
+	static var mockDefinitionsData: [DefinitionItem] {
+		var definitions: [DefinitionItem] = []
+		definitions.append(contentsOf: friendMockData.definition)
+		definitions.append(contentsOf: petMockData.definition)
+		return definitions
+	}
     
     static var friendMockData: TranslationResponse {
         return makeMockData(.friend)
