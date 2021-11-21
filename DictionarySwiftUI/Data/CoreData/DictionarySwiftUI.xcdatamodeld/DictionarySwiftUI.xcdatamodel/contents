@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DefinitionItemManagedObject" representedClassName="DefinitionItemManagedObject" syncable="YES">
         <attribute name="id" attributeType="String"/>
         <attribute name="position" optional="YES" attributeType="String"/>
@@ -31,7 +31,7 @@
         <relationship name="synonyms" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="SynonymItemManagedObject" inverseName="translation" inverseEntity="SynonymItemManagedObject"/>
     </entity>
     <elements>
-        <element name="DefinitionItemManagedObject" positionX="-228.8176879882812" positionY="-227.9566345214844" width="128" height="28"/>
+        <element name="DefinitionItemManagedObject" positionX="-228.8176879882812" positionY="-227.9566345214844" width="128" height="89"/>
         <element name="ExampleItemManagedObject" positionX="144.6934814453125" positionY="-38.03045654296875" width="128" height="73"/>
         <element name="MeaningItemManagedObject" positionX="-175.7252197265625" positionY="165.3049011230468" width="128" height="59"/>
         <element name="SynonymItemManagedObject" positionX="-400.7586059570312" positionY="145.2352905273438" width="128" height="74"/>

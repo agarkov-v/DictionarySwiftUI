@@ -9,8 +9,7 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct DictionaryWidgetEntryView : View {
-
+struct DictionaryWidgetEntryView: View {
 	// MARK: - Public Properties
 
 	// MARK: Body
@@ -20,7 +19,7 @@ struct DictionaryWidgetEntryView : View {
 			Color("background")
 				.ignoresSafeArea()
 				.allowsHitTesting(false)
-			
+
 			switch widgetFamily {
 			case .systemSmall:
 				smallView
@@ -54,10 +53,10 @@ struct DictionaryWidgetEntryView : View {
 			let randomDefinition = viewModel.randomEntry
 			Text(randomDefinition?.text ?? "NoResults")
 				.font(Font.system(size: 20))
-			
+
 			Divider()
 				.padding(.bottom, 5)
-			
+
 			Text(randomDefinition?.translationString ?? "NoTranslation")
 				.font(Font.system(size: 12))
 				.padding(.leading, 5)

@@ -11,15 +11,27 @@
 // unbreakable space - \U2060 \U2060
 "test %lld" = "it is test number %lld";
 
-// MARK: Errors
+// MARK: - Errors
 "UnknownError" = "unknown error";
 "BadResponseError" = "server error";
 "NotConnectedError" = "no network connection";
 "BadURLError" = "invalid url";
 "CustomError" = "an incomprehensible error";
 
+// MARK: - APP
+
+// MARK: Main
+"FavoritesMain" = "favorites";
+"SearchMain" = "search";
+"GameMain" = "game";
+
+// MARK: Titles
+"SearchTitle" = "Search";
+"FavoritesWords" = "Favorites words";
+"CheckMemory" = "Check your memory";
+
 "NoTranslation" = "There is no translation";
-"Search" = "Search...";
+"Searching" = "Search...";
 "NoResults" = "No results";
 "ChooseLanguage" = "Choose language";
 "OnBack" = "Go back";
@@ -29,10 +41,24 @@
 "Meanings" = "Meanings";
 "Examples" = "Examples";
 
-"EmptyData" = "You haven't added a single word to your favorites yet";
-"CheckMemory" = "Check your memory";
 "Submit" = "Submit";
 "TranslateWord" = "Translate the Word";
 "Hint" = "Hint";
 "CorrectTranslation" = "The translation is correct! :)";
 "IncorrectTranslation" = "Incorrect... Try again or see the hint :(";
+
+// MARK: Empty
+"EmptyFavorites" = "You haven't added a single word to your favorites yet ⭐️";
+"EmptySearch" = "Start looking for new words :) 📚";
+"EmptyGame" = "Add words to start the game 🎯";
+
+// MARK: Languages
+"Turkish" = "Turkish";
+"Spanish" = "Spanish";
+"Italian" = "Italian";
+"French" = "French";
+"German" = "German";
+"Ukrainian" = "Ukrainian";
+"Polish" = "Polish";
+"English" = "English";
+"Russian" = "Russian";

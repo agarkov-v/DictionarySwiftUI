@@ -8,54 +8,15 @@
 import Foundation
 
 struct TranslationResponse: Codable {
-    
-    let definition: [DefinitionItem]
-    
-    enum CodingKeys: String, CodingKey {
-        case definition = "def"
-    }
+	let definition: [DefinitionItem]
+
+	enum CodingKeys: String, CodingKey {
+		case definition = "def"
+	}
 }
 
-// MARK: Data
+// MARK: EmptyResponse
 
 extension TranslationResponse {
-    
-    static let emptyResponse = TranslationResponse(definition: [])
-
-	static var mockDefinitionsData: [DefinitionItem] {
-		var definitions: [DefinitionItem] = []
-		definitions.append(contentsOf: friendMockData.definition)
-		definitions.append(contentsOf: petMockData.definition)
-		return definitions
-	}
-    
-    static var friendMockData: TranslationResponse {
-        return makeMockData(.friend)
-    }
-    
-    static var petMockData: TranslationResponse {
-        return makeMockData(.pet)
-    }
-    
-    private static func makeMappedResponse(with response: Any) throws -> TranslationResponse {
-        let jsonData = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
-        let mappedResponse =  try JSONDecoder().decode(TranslationResponse.self, from: jsonData)
-        return mappedResponse
-    }
-    
-    private static func makeMockData(_ filename: MockDataLocalFilename) -> TranslationResponse {
-        let optMockData: TranslationResponse? = LocalDataLoadHelper.load(filename.rawValue) as TranslationResponse?
-        guard let mockData = optMockData else { return .emptyResponse }
-        return mockData
-    }
-}
-
-// MARK: MockDataLocalFilename
-
-private extension TranslationResponse {
-    
-    private enum MockDataLocalFilename: String {
-        case friend = "TranslateResponseFriendMock"
-        case pet = "TranslateResponsePetMock"
-    }
+	static let emptyResponse = TranslationResponse(definition: [])
 }

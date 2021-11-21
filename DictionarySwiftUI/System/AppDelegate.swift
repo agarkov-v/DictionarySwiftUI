@@ -8,15 +8,19 @@
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    
-    private let coreDataStorage = CoreDataStorage()
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        debugPrint("didFinishLaunchingWithOptions")
-        return true
-    }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        coreDataStorage.saveContext()
-    }
+	private let coreDataStorage = CoreDataStorage()
+
+	func application(
+		_ application: UIApplication,
+		didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+	) -> Bool {
+#if DEBUG
+		debugPrint("didFinishLaunchingWithOptions")
+#endif
+		return true
+	}
+
+	func applicationDidEnterBackground(_ application: UIApplication) {
+		coreDataStorage.saveContext()
+	}
 }

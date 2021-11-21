@@ -7,35 +7,44 @@
 
 import SwiftUI
 
+// MARK: EmptyDataView
+
+struct EmptyDataView: View {
+	// MARK: - Properties
+
+	// MARK: Body
+	var body: some View {
+		Text(text.localized)
+			.multilineTextAlignment(.center)
+	}
+
+	private let text: String
+
+	// MARK: - Init
+
+	init(_ text: String) {
+		self.text = text
+	}
+}
+
 // MARK: Previews
 
 #if DEBUG
 struct EmptyDataView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            EmptyDataView()
-                .previewLayout(.sizeThatFits)
-                .preferredColorScheme(.light)
-                .previewDisplayName("Defult")
-            
-            EmptyDataView()
-                .previewLayout(.sizeThatFits)
-                .preferredColorScheme(.dark)
-                .environment(\.locale, Locale.init(identifier: "ru"))
-                .previewDisplayName("Dark Mode")
-        }
-    }
+	static var previews: some View {
+		let emptyDataView = EmptyDataView("EmptyFavorites")
+		Group {
+			emptyDataView
+				.previewLayout(.sizeThatFits)
+				.preferredColorScheme(.light)
+				.previewDisplayName("Defult")
+
+			emptyDataView
+				.previewLayout(.sizeThatFits)
+				.preferredColorScheme(.dark)
+				.environment(\.locale, Locale.init(identifier: "ru"))
+				.previewDisplayName("Dark Mode")
+		}
+	}
 }
 #endif
-
-// MARK: EmptyDataView
-
-struct EmptyDataView: View {
-    
-    var body: some View {
-        Text("EmptyData")
-            .multilineTextAlignment(.center)
-    }
-}
-
-

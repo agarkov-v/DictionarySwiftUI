@@ -10,13 +10,12 @@ import SwiftUI
 import Intents
 
 struct WidgetEntry: TimelineEntry {
-	
 	let date: Date
 	let definitions: [DefinitionItem]
 
 	init(
-		date: Date = Date(),
-		definitions: [DefinitionItem]
+		definitions: [DefinitionItem],
+		date: Date = Date()
 	) {
 		self.date = date
 		self.definitions = definitions

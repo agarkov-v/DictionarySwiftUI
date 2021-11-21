@@ -7,83 +7,82 @@
 
 import SwiftUI
 
-#if DEBUG
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MainTabView()
-                .preferredColorScheme(.light)
-                .previewDisplayName("Defult")
-            
-            MainTabView()
-                .preferredColorScheme(.dark)
-                .previewDisplayName("Dark Mode")
-        }
-    }
-}
-#endif
+// MARK: - MainTabView
 
 struct MainTabView: View {
-    
-    // MARK: - Init
-    
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor(Color.bar)
-    }
-    
-    // MARK: - Body
-    
-    var body: some View {
-        TabView(selection: $selectedTab) {
-            translationView
-            gameView
-        }
-        .accentColor(Color.mainAccent)
-    }
-    
-    // MARK: - Private Properties
-    
-    @State private var selectedTab: TabItems = .main
-    
-    private var translationView: some View {
-        
-        return TranslationView()
-            .tabItem {
-                Label(
-                    "search",
-                    systemImage: "magnifyingglass"
-                )
-            }
-            .onTapGesture {
-                selectedTab = .main
-            }
-            .tag(TabItems.main)
-    }
-    
-    private var gameView: some View {
-        
-        return GameView()
-            .tabItem {
-                Label(
-                    "game",
-                    systemImage: "gamecontroller"
-                )
-            }
-            .onTapGesture {
-                selectedTab = .game
-            }
-            .tag(TabItems.game)
-    }
-    
-    
-    
+	// MARK: - Body
+
+	var body: some View {
+		TabView(selection: $viewModel.mainNavigation.selectedTab) {
+			favoriteView
+			searchView
+			gameView
+		}
+		.onAppear(perform: UIApplication.shared.addEndEditingTapGestureRecognizer)
+		.accentColor(Color.mainAccent)
+		.environmentObject(viewModel.mainNavigation)
+	}
+
+	// MARK: - Init
+
+	init(
+		viewModel: StateObject<MainViewModel> = StateObject(wrappedValue: MainViewModel())
+	) {
+		_viewModel = viewModel
+	}
+
+	// MARK: - Private Properties
+
+	@StateObject private var viewModel: MainViewModel
+
+	private var favoriteView: some View {
+		return FavoriteView()
+			.tabItem {
+				Label(
+					"FavoritesMain",
+					systemImage: "star.fill"
+				)
+			}
+			.tag(TabItems.favorite)
+	}
+
+	private var searchView: some View {
+		return SearchView()
+			.tabItem {
+				Label(
+					"SearchMain",
+					systemImage: "magnifyingglass"
+				)
+			}
+			.tag(TabItems.search)
+	}
+
+	private var gameView: some View {
+		return GameView()
+			.tabItem {
+				Label(
+					"GameMain",
+					systemImage: "gamecontroller"
+				)
+			}
+			.tag(TabItems.game)
+	}
 }
 
-//MARK: - TabItems
+// MARK: - Preview
 
-private extension MainTabView {
-    private enum TabItems {
-        case main
-        case game
-    }
+#if DEBUG
+struct MainView_Previews: PreviewProvider {
+	static var previews: some View {
+		Group {
+			MainTabView()
+				.preferredColorScheme(.light)
+				.previewDisplayName("Defult")
+
+			MainTabView()
+				.preferredColorScheme(.dark)
+				.previewDisplayName("Dark Mode")
+		}
+	}
 }
+#endif

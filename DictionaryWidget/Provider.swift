@@ -10,20 +10,18 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
-
 	// MARK: There should be an AppSorage there, but I don't have a developer account.
-	var definitions: [DefinitionItem] = TranslationResponse.mockDefinitionsData
+	var definitions: [DefinitionItem] = MockHelper.mockDefinitionsData
 
 	func placeholder(in context: Context) -> WidgetEntry {
 		WidgetEntry(definitions: definitions)
 	}
 
-	func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetEntry) -> ()) {
+	func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetEntry) -> Void) {
 		DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-			let entry = WidgetEntry(date: Date(), definitions: definitions)
+			let entry = WidgetEntry(definitions: definitions, date: Date())
 			completion(entry)
 		}
-
 	}
 
 	func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<WidgetEntry>) -> Void) {
@@ -33,7 +31,7 @@ struct Provider: IntentTimelineProvider {
 		let currentDate = Date()
 		for hourOffset in 0 ..< 1 {
 			let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-			let entry = WidgetEntry(date: entryDate, definitions: definitions)
+			let entry = WidgetEntry(definitions: definitions, date: entryDate)
 			entries.append(entry)
 		}
 

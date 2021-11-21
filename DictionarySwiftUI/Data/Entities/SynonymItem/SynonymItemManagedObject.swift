@@ -9,7 +9,6 @@ import CoreData
 
 @objc(SynonymItemManagedObject)
 public class SynonymItemManagedObject: NSManagedObject, Identifiable {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SynonymItemManagedObject> {
         return NSFetchRequest<SynonymItemManagedObject>(entityName: "SynonymItemManagedObject")
     }
@@ -17,9 +16,4 @@ public class SynonymItemManagedObject: NSManagedObject, Identifiable {
     @NSManaged public var position: String?
     @NSManaged public var text: String
     @NSManaged public var translation: TranslationItemManagedObject?
-    
-    func fill(with synonymItem: SynonymItem) {
-        position = synonymItem.position
-        text = synonymItem.text
-    }
 }

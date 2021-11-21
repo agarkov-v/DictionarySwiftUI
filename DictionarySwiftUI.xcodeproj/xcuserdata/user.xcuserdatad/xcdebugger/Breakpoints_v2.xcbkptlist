@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "576DE22A-331E-42A9-A5B5-9DB4E49928D5"
+   uuid = "8CF0360C-97AA-4FE4-8007-D125CF60196E"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F38FACFD-D935-49C8-9AC6-4250E83B1C45"
+            uuid = "DBDF6111-4E4B-429E-8A46-645825F6DFD4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DictionarySwiftUI/Screens/ContentView.swift"
+            filePath = "DictionarySwiftUI/Data/LocalSettings/UserSettings.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "ContentView_Previews"
-            landmarkType = "14">
+            startingLineNumber = "61"
+            endingLineNumber = "61">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "83E96DBA-492A-466F-A403-E98DBF22EA93"
+            uuid = "01C4EC98-F355-4348-A6A8-5B6730FA4D5E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DictionarySwiftUI/Screens/Test/testView.swift"
+            filePath = "DictionarySwiftUI/Data/LocalSettings/UserSettings.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "58"
+            endingLineNumber = "58">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

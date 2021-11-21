@@ -8,7 +8,6 @@
 import WidgetKit
 
 class WidgetEntryViewModel {
-
 	// MARK: - Public Properties
 
 	var randomEntry: DefinitionItem? {

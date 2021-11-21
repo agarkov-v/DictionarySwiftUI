@@ -4,12 +4,13 @@
 # Specific user data
 **/xcshareddata
 **/xcuserdata
+/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
+**/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
+**/user.xcuserdatad
+DictionarySwiftUI.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
 
 # Build
 build
-
-# AppCode
-GoldApple/.idea
 
 # Breakpoints
 *.xcbkptlist

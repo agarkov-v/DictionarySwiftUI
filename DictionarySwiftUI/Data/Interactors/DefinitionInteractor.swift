@@ -8,48 +8,46 @@
 import Foundation
 
 protocol DefinitionInteractorProtocol {
-    func addToFavourites(_ definition: DefinitionItem)
-    func isSavedToFavourites(_ definition: DefinitionItem) -> Bool
-    func deleteFromFavourites(_ definition: DefinitionItem)
-    func getAll() -> [DefinitionItem]
+	func addToFavourites(_ definition: DefinitionItem)
+	func isSavedToFavourites(_ definition: DefinitionItem) -> Bool
+	func deleteFromFavourites(_ definition: DefinitionItem)
+	func getAll() -> [DefinitionItem]
 	func deleteAll()
 }
 
 class DefinitionInteractor: DefinitionInteractorProtocol {
+	// MARK: - Private Properties
 
-    // MARK: - Private Properties
+	private let coreDataStorage: DefinitionCDStorageServiceProtocol
 
-    private let coreDataStorage: DefinitionCDStorageServiceProtocol
+	// MARK: - Init
 
-    // MARK: - Init
+	init(
+		coreDataStorage: DefinitionCDStorageServiceProtocol = DataService.shared.definitionCDStorageService
+	) {
+		self.coreDataStorage = coreDataStorage
+	}
 
-    init(
-        coreDataStorage: DefinitionCDStorageServiceProtocol = DataService.shared.definitionCDStorageService
-    ) {
-        self.coreDataStorage = coreDataStorage
-    }
+	// MARK: - Public Methods
 
+	func addToFavourites(_ definition: DefinitionItem) {
+		coreDataStorage.addDefinition(definition)
+	}
 
-    // MARK: - Public Methods
+	func isSavedToFavourites(_ definition: DefinitionItem) -> Bool {
+		coreDataStorage.hasDefinition(with: definition.id)
+	}
 
-    func addToFavourites(_ definition: DefinitionItem) {
-        coreDataStorage.addDefinition(definition)
-    }
+	func deleteFromFavourites(_ definition: DefinitionItem) {
+		coreDataStorage.deleteDefinition(with: definition.id)
+	}
 
-    func isSavedToFavourites(_ definition: DefinitionItem) -> Bool {
-        coreDataStorage.hasDefinition(with: definition.id)
-    }
+	func getAll() -> [DefinitionItem] {
+		let fetchedItems = coreDataStorage.fetchAllDefenitions()
+		let items = fetchedItems.map { $0.toDomain() }
+		return items
+	}
 
-    func deleteFromFavourites(_ definition: DefinitionItem) {
-        coreDataStorage.deleteDefinition(with: definition.id)
-    }
-    
-    func getAll() -> [DefinitionItem] {
-        let fetchedItems = coreDataStorage.fetchAllDefenitions()
-        let items = fetchedItems.map { $0.toDomain() }
-        return items
-    }
-	
 	func deleteAll() {
 		coreDataStorage.deleteAllDefinitions()
 	}

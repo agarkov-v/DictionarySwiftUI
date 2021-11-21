@@ -9,7 +9,6 @@ import CoreData
 
 @objc(DefinitionItemManagedObject)
 public class DefinitionItemManagedObject: NSManagedObject, Identifiable {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DefinitionItemManagedObject> {
         return NSFetchRequest<DefinitionItemManagedObject>(entityName: "DefinitionItemManagedObject")
     }
@@ -18,36 +17,10 @@ public class DefinitionItemManagedObject: NSManagedObject, Identifiable {
     @NSManaged public var position: String?
     @NSManaged public var text: String
     @NSManaged public var translations: NSOrderedSet
-
-    func toDomain() -> DefinitionItem {
-        let translationItemMOs = translations.array as? [TranslationItemManagedObject]
-        
-        let translations = translationItemMOs?.compactMap {
-            TranslationItem.fill(with: $0)
-        } ?? []
-        
-        let definitionItem = DefinitionItem(text: text,
-                                            position: position,
-                                            translations: translations)
-        return definitionItem
-    }
-
-    func fill(with definition: DefinitionItem) {
-        id = definition.id
-        position = definition.position
-        text = definition.text
-        
-        definition.translations.enumerated().forEach { index, translation in
-            let translationItemMO = TranslationItemManagedObject(context: managedObjectContext!)
-            translationItemMO.fill(with: translation)
-            insertIntoTranslations(translationItemMO, at: index)
-        }
-    }
 }
 
 // MARK: Generated accessors for translations
 extension DefinitionItemManagedObject {
-
     @objc(insertObject:inTranslationsAtIndex:)
     @NSManaged public func insertIntoTranslations(_ value: TranslationItemManagedObject, at idx: Int)
 
@@ -77,5 +50,4 @@ extension DefinitionItemManagedObject {
 
     @objc(removeTranslations:)
     @NSManaged public func removeFromTranslations(_ values: NSOrderedSet)
-
 }

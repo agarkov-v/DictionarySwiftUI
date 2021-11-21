@@ -8,17 +8,11 @@
 import Foundation
 
 struct MeaningItem: Codable, Hashable {
-    
-    let text : String
-    
-    enum CodingKeys: String, CodingKey {
-        case text = "text"
-    }
+	let text: String
 }
 
 extension MeaningItem {
-    
-    static func fill(with meaningItemMO: MeaningItemManagedObject) -> MeaningItem {
-        MeaningItem(text: meaningItemMO.text)
-    }
+	static func fill(with meaningItemMO: MeaningItemManagedObject) -> MeaningItem {
+		MeaningItem(text: meaningItemMO.text)
+	}
 }
