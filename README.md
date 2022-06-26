@@ -24,6 +24,7 @@ The project is written on the new SwiftUI framework with all its features, the M
 **Not all of this was done with "Best practice" since the original goal of the project was to be able to review the new SwiftUI functionality and practice using it.**
 
 ### Dictionary API and API-key
+The old API key has been deleted, so you will need to create your own.
 This [**API (Eng)**](https://yandex.com/dev/dictionary/) from Yandex company was used for development.
 To check the dictionary performance on a simulator or device, you need:
 - [Read the terms of use.](https://yandex.com/legal/dictionary_api/)
@@ -46,6 +47,7 @@ To check the dictionary performance on a simulator or device, you need:
 **Не все из написанного было сделано с "Best practice" так как первоначальной целью проекта была возможность рассмотреть новый функционал SwiftUI и попрактиковаться в его использовании.**
 
 ### API словаря и API-ключ
+Старый API-ключ был удален, так что вам нужно будет создать свой.
 Для разработки использовалось [**API (Ru)**](https://yandex.ru/dev/dictionary/) от компании Яндекс. 
 Чтобы проверить работоспособность словаря на симуляторе или устройстве необходимо:
 - [Прочитать условия использования.](https://yandex.com/legal/dictionary_api/)
